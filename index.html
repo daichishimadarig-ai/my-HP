@@ -62,37 +62,39 @@
         <div class="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
             <!-- Logo Area -->
             <div class="flex items-center gap-2 z-50">
+                <!-- Logo with initial inversion and blend mode for dark background -->
                 <img 
-                    src="./ロゴ黒.png" 
+                    src="./logo.png" 
                     alt="RIG consulting Logo" 
-                    class="h-10 md:h-12 w-auto object-contain"
-                    onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+                    class="h-14 md:h-20 w-auto object-contain transition-all duration-300 invert mix-blend-screen"
+                    id="nav-logo"
+                    onerror="if(!this.src.includes('ロゴ黒.png')) this.src='./ロゴ黒.png'; else { this.style.display='none'; this.nextElementSibling.style.display='block'; }"
                 >
                 <!-- Fallback text -->
-                <span class="text-2xl font-bold tracking-tighter hidden text-[#171717]">RIG</span>
+                <span id="nav-text" class="text-2xl font-bold tracking-tighter hidden text-white">RIG</span>
             </div>
 
             <!-- Desktop Nav -->
             <div class="hidden md:flex items-center gap-8">
-                <a href="#concept" class="text-sm font-medium tracking-widest hover:text-emerald-800 transition-colors uppercase relative group">
+                <a href="#concept" class="nav-link text-sm font-medium tracking-widest hover:text-emerald-200 transition-colors uppercase relative group text-white">
                     Concept
-                    <span class="absolute -bottom-1 left-0 w-0 h-px bg-emerald-900 transition-all duration-300 group-hover:w-full"></span>
+                    <span class="absolute -bottom-1 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full"></span>
                 </a>
-                <a href="#services" class="text-sm font-medium tracking-widest hover:text-emerald-800 transition-colors uppercase relative group">
+                <a href="#services" class="nav-link text-sm font-medium tracking-widest hover:text-emerald-200 transition-colors uppercase relative group text-white">
                     Services
-                    <span class="absolute -bottom-1 left-0 w-0 h-px bg-emerald-900 transition-all duration-300 group-hover:w-full"></span>
+                    <span class="absolute -bottom-1 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full"></span>
                 </a>
-                <a href="#company" class="text-sm font-medium tracking-widest hover:text-emerald-800 transition-colors uppercase relative group">
+                <a href="#company" class="nav-link text-sm font-medium tracking-widest hover:text-emerald-200 transition-colors uppercase relative group text-white">
                     Company
-                    <span class="absolute -bottom-1 left-0 w-0 h-px bg-emerald-900 transition-all duration-300 group-hover:w-full"></span>
+                    <span class="absolute -bottom-1 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full"></span>
                 </a>
-                <a href="#contact" class="bg-emerald-900 text-white px-6 py-2 text-sm tracking-wide hover:bg-emerald-800 transition-colors">
+                <a href="#contact" class="nav-cta bg-white text-emerald-900 px-6 py-2 text-sm tracking-wide hover:bg-slate-100 transition-colors">
                     Contact Us
                 </a>
             </div>
 
             <!-- Mobile Menu Toggle -->
-            <button id="menu-toggle" class="md:hidden z-50 p-2 text-slate-900">
+            <button id="menu-toggle" class="md:hidden z-50 p-2 text-white">
                 <i data-lucide="menu" class="w-6 h-6"></i>
             </button>
         </div>
@@ -110,12 +112,14 @@
     <section class="relative h-screen w-full flex items-center overflow-hidden">
         <!-- Abstract Nature Background -->
         <div class="absolute inset-0 z-0">
+            <!-- Local filename for deployment -->
             <img 
-                src="https://images.unsplash.com/photo-1440557653017-4390817293e2?q=80&w=2560&auto=format&fit=crop" 
-                alt="Deep forest roots abstract" 
-                class="w-full h-full object-cover opacity-90 brightness-[0.85] grayscale-[20%]"
+                src="./hero-image.jpg" 
+                alt="" 
+                class="w-full h-full object-cover opacity-90 brightness-[0.8] grayscale-[10%]"
+                onerror="this.style.display='none'"
             >
-            <div class="absolute inset-0 bg-gradient-to-r from-emerald-950/40 to-transparent mix-blend-multiply"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-emerald-950/50 to-transparent mix-blend-multiply"></div>
         </div>
 
         <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full pt-20">
@@ -125,8 +129,8 @@
                     <span class="font-bold">Sustainable Growth.</span>
                 </h1>
                 <p class="text-lg md:text-xl font-light tracking-wide max-w-lg text-white/90">
-                    揺るぎない根を張り、企業の持続的な成長を支える。<br>
-                    会計・財務のプロフェッショナルファーム。
+                    強固な根を張り、企業の持続的な成長を支える<br>
+                    企業価値向上へ共に歩む、財務会計パートナー
                 </p>
             </div>
         </div>
@@ -148,25 +152,24 @@
                 </h2>
                 <div class="space-y-6 text-slate-600 leading-relaxed text-justify">
                     <p>
-                        巨木が空高く枝を伸ばすことができるのは、
-                        見えない地中で深く、広く、力強く根を張っているからです。
-                    </p>
-                    <p>
-                        私たちRIG consultingは、企業の成長（Growing）の根幹（Roots）となる
+                        RIG consultingは、企業の成長（Growing）の根幹（Roots）となる
                         財務・会計・ガバナンスの領域を強固に支えます。
                     </p>
                     <p>
-                        表面的な数値改善だけでなく、組織の土壌を整え、
-                        永続的な発展を可能にするための「根」を共に育てます。
+                        専門的な知見を元にシード・アーリー期の事業計画の策定・資金調達、レイター期のIPO・M&A、そして上場後のガバナンス強化まで、企業の成長フェーズに合わせた最適なソリューションを提供します。
+                    </p>
+                    <p>
+                        専属の担当者が経営のパートナーとして伴走し、組織の根幹を共に構築。必要に応じて各分野の専門家とも連携し、貴社の持続的な成長を支え続けます。
                     </p>
                 </div>
             </div>
             <div class="order-1 md:order-2 relative h-[500px] bg-slate-200 overflow-hidden">
                 <!-- Abstract visual of roots/structure -->
+                <!-- Updated with uploaded file -->
                 <img 
-                    src="./写真　photo-1542601906990-b4d3fb778b09.avif" 
-                    alt="Tree roots texture" 
-                    class="w-full h-full object-cover grayscale opacity-80"
+                    src="./Conheça 6 práticas s.png" 
+                    alt="Roots and Growth Concept" 
+                    class="w-full h-full object-cover opacity-90"
                     onerror="this.style.display='none'; this.parentNode.classList.add('bg-slate-300');"
                 >
                 <div class="absolute inset-0 border-[1px] border-white/20 m-6 pointer-events-none"></div>
@@ -177,45 +180,67 @@
     <!-- Services Section -->
     <section id="services" class="py-24 bg-slate-50">
         <div class="max-w-7xl mx-auto px-6 md:px-12">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-16 border-b border-slate-200 pb-8">
-                <div>
+            <div class="flex flex-col md:flex-row items-end gap-10 mb-16 border-b border-slate-200 pb-8">
+                <div class="shrink-0">
                     <div class="text-emerald-900 text-xs font-bold tracking-[0.3em] uppercase mb-4">Our Expertise</div>
                     <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Services</h2>
                 </div>
-                <p class="text-slate-500 text-sm mt-4 md:mt-0 max-w-md text-right">
-                    IPO支援から財務戦略まで、<br class="hidden md:block">
+                <p class="text-slate-500 text-sm mt-4 md:mt-0 md:pb-1 text-left">
+                    シード期からEXIT後まで、<br class="hidden md:block">
                     企業のフェーズに合わせた最適なソリューションを提供します。
                 </p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Service Card 1 -->
+                <!-- Service Card 1: 成長戦略支援 -->
                 <div class="bg-white p-8 md:p-10 group hover:bg-emerald-900 hover:text-white transition-all duration-500 border-t-2 border-slate-200 hover:border-emerald-700">
                     <i data-lucide="trending-up" class="w-10 h-10 mb-6 text-emerald-900 group-hover:text-emerald-200" stroke-width="1.5"></i>
-                    <h3 class="text-xl font-bold mb-4 tracking-wide">IPO Consulting</h3>
-                    <p class="text-sm font-bold text-slate-400 mb-2 uppercase tracking-widest group-hover:text-emerald-300">IPO支援・準備</p>
-                    <p class="text-slate-600 leading-relaxed text-sm group-hover:text-slate-200">
-                        資本政策の策定から内部管理体制の構築、監査法人対応、証券審査対応まで、上場に向けたプロセスをトータルでサポートします。
+                    <h3 class="text-2xl font-bold mb-6 tracking-wide flex items-start">
+                        <span class="shrink-0 mr-1">1.</span>
+                        <span>成長戦略支援</span>
+                    </h3>
+                    <ul class="space-y-3 text-slate-600 text-sm font-bold group-hover:text-slate-200 list-disc list-outside ml-4 marker:text-emerald-900 group-hover:marker:text-emerald-200">
+                        <li>事業計画策定支援</li>
+                        <li>資金調達支援</li>
+                        <li>資本政策支援</li>
+                        <li>IPO支援<br><span class="text-xs opacity-80 font-normal">（計画策定・進捗管理、申請書類（Ⅰの部、Ⅱの部等）作成、審査対応・論点整理）</span></li>
+                        <li>株価算定</li>
+                    </ul>
+                    <p class="text-slate-600 leading-relaxed text-sm mt-6 pt-4 border-t border-slate-100 group-hover:border-emerald-800 group-hover:text-slate-200">
+                        事業計画の策定から資金調達、資本政策の立案まで、企業の成長フェーズに合わせた戦略的な支援を提供します。IPOに向けたロードマップの策定・実行支援や、申請書類作成サポート、IPO審査対応の支援を行います。
                     </p>
                 </div>
 
-                <!-- Service Card 2 -->
-                <div class="bg-white p-8 md:p-10 group hover:bg-emerald-900 hover:text-white transition-all duration-500 border-t-2 border-slate-200 hover:border-emerald-700">
-                    <i data-lucide="landmark" class="w-10 h-10 mb-6 text-emerald-900 group-hover:text-emerald-200" stroke-width="1.5"></i>
-                    <h3 class="text-xl font-bold mb-4 tracking-wide">CFO Advisory</h3>
-                    <p class="text-sm font-bold text-slate-400 mb-2 uppercase tracking-widest group-hover:text-emerald-300">社外CFO・財務顧問</p>
-                    <p class="text-slate-600 leading-relaxed text-sm group-hover:text-slate-200">
-                        資金調達、予実管理、経営指標の策定など、経営判断に直結する財務戦略の立案と実行を、経営者のパートナーとして支援します。
-                    </p>
-                </div>
-
-                <!-- Service Card 3 -->
+                <!-- Service Card 2: 内部統制構築・ガバナンス強化支援 -->
                 <div class="bg-white p-8 md:p-10 group hover:bg-emerald-900 hover:text-white transition-all duration-500 border-t-2 border-slate-200 hover:border-emerald-700">
                     <i data-lucide="shield-check" class="w-10 h-10 mb-6 text-emerald-900 group-hover:text-emerald-200" stroke-width="1.5"></i>
-                    <h3 class="text-xl font-bold mb-4 tracking-wide">Governance</h3>
-                    <p class="text-sm font-bold text-slate-400 mb-2 uppercase tracking-widest group-hover:text-emerald-300">内部統制・ガバナンス</p>
-                    <p class="text-slate-600 leading-relaxed text-sm group-hover:text-slate-200">
-                        事業の成長を阻害しない、実効性の高い内部統制の構築支援。J-SOX対応やコンプライアンス体制の整備を行います。
+                    <h3 class="text-2xl font-bold mb-6 tracking-wide flex items-start">
+                        <span class="shrink-0 mr-1">2.</span>
+                        <span>内部統制構築・<br>ガバナンス強化支援</span>
+                    </h3>
+                    <ul class="space-y-3 text-slate-600 text-sm font-bold group-hover:text-slate-200 list-disc list-outside ml-4 marker:text-emerald-900 group-hover:marker:text-emerald-200">
+                        <li>J-SOX対応支援</li>
+                        <li>内部監査代行業務</li>
+                    </ul>
+                    <p class="text-slate-600 leading-relaxed text-sm mt-6 pt-4 border-t border-slate-100 group-hover:border-emerald-800 group-hover:text-slate-200">
+                        リスクを適切にコントロールするための内部統制構築を支援します。J-SOX対応や内部監査機能の構築・運用代行を通じて、健全なガバナンス体制の確立に寄与します。
+                    </p>
+                </div>
+
+                <!-- Service Card 3: 決算高度化支援 -->
+                <div class="bg-white p-8 md:p-10 group hover:bg-emerald-900 hover:text-white transition-all duration-500 border-t-2 border-slate-200 hover:border-emerald-700">
+                    <i data-lucide="landmark" class="w-10 h-10 mb-6 text-emerald-900 group-hover:text-emerald-200" stroke-width="1.5"></i>
+                    <h3 class="text-2xl font-bold mb-6 tracking-wide flex items-start">
+                        <span class="shrink-0 mr-1">3.</span>
+                        <span>決算高度化支援</span>
+                    </h3>
+                    <ul class="space-y-3 text-slate-600 text-sm font-bold group-hover:text-slate-200 list-disc list-outside ml-4 marker:text-emerald-900 group-hover:marker:text-emerald-200">
+                        <li>連結決算構築支援</li>
+                        <li>ポジションペーパー作成支援</li>
+                        <li>会計論点検討サポート</li>
+                    </ul>
+                    <p class="text-slate-600 leading-relaxed text-sm mt-6 pt-4 border-t border-slate-100 group-hover:border-emerald-800 group-hover:text-slate-200">
+                        連結決算体制の構築や複雑な会計論点の検討、ポジションペーパーの作成など、決算業務の高度化をサポート。財務報告体制の強化を支援します。
                     </p>
                 </div>
             </div>
@@ -223,16 +248,28 @@
     </section>
 
     <!-- Quote / Mission Section -->
-    <section class="py-24 bg-emerald-900 text-white relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+    <section class="py-24 text-white relative overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <!-- Reverted to .jpg as requested -->
+            <img 
+                src="./parth-nandania-PzM65s-9d6o-unsplash.jpg" 
+                alt="Mission Background" 
+                class="w-full h-full object-cover"
+                onerror="this.style.display='none'; this.parentNode.classList.add('bg-emerald-900');"
+            >
+            <!-- Overlay for text readability -->
+            <div class="absolute inset-0 bg-emerald-900/80 mix-blend-multiply"></div>
+        </div>
+
         <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
-            <div class="mx-auto mb-8 w-12 h-12 flex justify-center items-center opacity-80 text-emerald-300">
-                 <i data-lucide="tree-deciduous" class="w-12 h-12"></i>
-            </div>
-            <h3 class="text-2xl md:text-4xl font-light leading-relaxed mb-8">
-                "本質的な企業価値は、<br>健全な土壌の上にのみ成立する。"
+            <!-- Font size adjusted for better readability with longer text -->
+            <h3 class="text-xl md:text-3xl font-light leading-relaxed mb-10">
+                "成長戦略からガバナンスまで<br><br class="hidden md:block">
+                豊富な実務経験に基づく地に足のついた支援で、<br>
+                貴社の成長に伴走します"
             </h3>
-            <p class="text-emerald-200/80 tracking-widest text-sm uppercase">RIG Consulting Mission</p>
+            <p class="text-emerald-200/80 tracking-widest text-sm uppercase">RIG consulting LLC</p>
         </div>
     </section>
 
@@ -250,18 +287,23 @@
                         <dt class="text-sm font-bold text-slate-500 uppercase tracking-wider">Company Name</dt>
                         <dd class="md:col-span-2 text-slate-900 font-medium">RIG consulting合同会社</dd>
                     </div>
+                    <!-- Concept Removed -->
                     <div class="py-6 grid grid-cols-1 md:grid-cols-3 gap-4">
                         <dt class="text-sm font-bold text-slate-500 uppercase tracking-wider">Main Business</dt>
                         <dd class="md:col-span-2 text-slate-900 leading-relaxed">
                             会計・財務コンサルティング<br>
-                            IPO（新規上場）支援<br>
                             スタートアップ・ベンチャー支援<br>
+                            IPO（新規上場）支援<br>
                             内部統制構築支援
                         </dd>
                     </div>
                     <div class="py-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-                        <dt class="text-sm font-bold text-slate-500 uppercase tracking-wider">Concept</dt>
-                        <dd class="md:col-span-2 text-slate-900">Roots in Growing（成長の根幹を支える）</dd>
+                        <dt class="text-sm font-bold text-slate-500 uppercase tracking-wider">Address</dt>
+                        <dd class="md:col-span-2 text-slate-900">兵庫県神戸市垂水区</dd>
+                    </div>
+                    <div class="py-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <dt class="text-sm font-bold text-slate-500 uppercase tracking-wider">Established</dt>
+                        <dd class="md:col-span-2 text-slate-900">2026年1月</dd>
                     </div>
                 </dl>
             </div>
@@ -274,38 +316,37 @@
                 
                 <div class="flex flex-col md:flex-row gap-12 md:gap-20 items-center md:items-start">
                     <!-- Image Placeholder -->
-                    <div class="w-full md:w-1/3 flex-shrink-0">
-                        <div class="aspect-[3/4] bg-slate-200 relative overflow-hidden group">
-                            <!-- Placeholder for Representative Image -->
+                    <!-- Width set to 5/12 for slightly larger image -->
+                    <div class="w-full md:w-5/12 flex-shrink-0">
+                        <div class="bg-slate-200 relative overflow-hidden group">
+                            <!-- Image set to selfphoto2.png -->
                             <img 
-                                src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=800&auto=format&fit=crop" 
+                                src="./selfphoto2.png" 
                                 alt="Representative Portrait" 
-                                class="w-full h-full object-cover grayscale opacity-90 transition-transform duration-700 group-hover:scale-105"
+                                class="w-full h-auto transition-transform duration-700 group-hover:scale-105"
+                                onerror="this.style.display='none'; this.parentNode.classList.add('bg-slate-300');"
                             >
                             <div class="absolute inset-0 border-[1px] border-white/20 m-4 pointer-events-none"></div>
                         </div>
                     </div>
 
                     <!-- Content -->
-                    <div class="w-full md:w-2/3">
+                    <div class="w-full md:w-7/12">
                         <div class="mb-8">
                             <h3 class="text-3xl font-bold text-slate-900 mb-2">
-                                代表者名 <span class="text-lg font-normal text-slate-500 ml-4">Name</span>
+                                嶋田 大地
                             </h3>
                             <p class="text-emerald-900 font-medium tracking-wide">
                                 代表社員 / 公認会計士
                             </p>
                         </div>
 
-                        <div class="space-y-6 text-slate-600 leading-relaxed mb-10 text-justify">
+                        <div class="text-slate-600 leading-relaxed mb-10 text-justify">
                             <p>
-                                大手監査法人にて上場企業の会計監査、IPO支援業務に従事した後、
-                                独立系コンサルティングファームにて多数のベンチャー企業のCFO業務を支援。
-                            </p>
-                            <p>
-                                「企業の成長は、見えない根の部分にこそ真髄がある」という信念のもと、
-                                RIG consultingを設立。
-                                表面的なテクニックに頼らない、本質的な財務基盤の構築支援を行っている。
+                                2004年にあずさ監査法人入所後、グローバル展開している大手製造業、半導体製造業、大手ゼネコン、商社等の監査業務に従事するとともに、IFRS導入PJ、内部統制構築支援アドバイザリーやM&A業務に携わる。<br>
+                                また、スタートアップ・IPO支援業務の専⾨家として、スタートアップへの支援業務や数多くのIPO業務を行うとともに、外部セミナー講師などの対外活動を担当。<br>
+                                さらにインキュベーション活動として、大学発スタートアップに対するアドバイザリー業務に従事するとともに、スタートアップ関係書籍の執筆にも携わる。<br>
+                                2025年12月に有限責任 あずさ監査法人を退所し、2026年1月にRIG consulting合同会社を設立、代表社員に就任。スタートアップ・IPO支援、会計・財務コンサルティングに従事するほか、スタートアップの社外役員や顧問なども務める。
                             </p>
                         </div>
 
@@ -314,20 +355,35 @@
                             <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-6">Biography</h4>
                             <ul class="space-y-4 text-sm">
                                 <li class="grid grid-cols-[80px_1fr] gap-4">
-                                    <span class="font-bold text-slate-900">20xx</span>
-                                    <span class="text-slate-600">大学 経済学部 卒業</span>
+                                    <span class="font-bold text-slate-900">2002</span>
+                                    <span class="text-slate-600">立命館大学法学部 卒業</span>
                                 </li>
                                 <li class="grid grid-cols-[80px_1fr] gap-4">
-                                    <span class="font-bold text-slate-900">20xx</span>
-                                    <span class="text-slate-600">有限責任監査法人○○ 入所</span>
+                                    <span class="font-bold text-slate-900">2004</span>
+                                    <span class="text-slate-600">有限責任あずさ監査法⼈ 入所</span>
                                 </li>
                                 <li class="grid grid-cols-[80px_1fr] gap-4">
-                                    <span class="font-bold text-slate-900">20xx</span>
-                                    <span class="text-slate-600">株式会社○○ 財務部長就任</span>
+                                    <span class="font-bold text-slate-900">2025</span>
+                                    <span class="text-slate-600">有限責任あずさ監査法⼈ 退所(最終職位：テクニカル・ディレクター)</span>
                                 </li>
                                 <li class="grid grid-cols-[80px_1fr] gap-4">
-                                    <span class="font-bold text-slate-900">20xx</span>
-                                    <span class="text-slate-600">RIG consulting合同会社 設立</span>
+                                    <span class="font-bold text-slate-900">2026</span>
+                                    <span class="text-slate-600">RIG consulting合同会社設立 代表社員就任</span>
+                                </li>
+                            </ul>
+
+                            <!-- OTHER Section -->
+                            <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-6 mt-10">Other</h4>
+                            <ul class="space-y-4 text-sm text-slate-600">
+                                <li>あやめ監査法人 パートナー</li>
+                                <li>スタートアップ 社外役員・顧問</li>
+                                <li class="mt-4">
+                                    <span class="font-bold text-slate-900 block mb-2">著書</span>
+                                    <ul class="space-y-2 list-disc list-outside ml-4 text-slate-500">
+                                        <li>「Ｑ＆Ａ株式上場の実務ガイド」（中央経済社、共著）</li>
+                                        <li>「インキュベーション・ネクスト-グローバル展開を目指すスタートアップ創出への<br>インサイト」（中央経済社、共著）</li>
+                                        <li>「ディープテック・スタートアップ 12人の新しい事業領域の開拓者」（中央経済社、共著）</li>
+                                    </ul>
                                 </li>
                             </ul>
                         </div>
@@ -343,26 +399,26 @@
             <div class="text-emerald-900 text-xs font-bold tracking-[0.3em] uppercase mb-4">Get in Touch</div>
             <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-8">Contact Us</h2>
             <p class="text-slate-600 mb-12">
-                初回のご相談は無料にて承っております。<br>
-                お気軽にお問い合わせください。
+                お問い合わせやご依頼は、お気軽に以下のフォームからご連絡ください。
             </p>
             
             <div class="bg-white p-8 md:p-12 shadow-sm max-w-2xl mx-auto border border-slate-100">
                 <!-- Simple Form -->
-                <form class="space-y-6 text-left" onsubmit="event.preventDefault(); alert('お問い合わせありがとうございます（デモ画面）');">
+                <!-- Formspree ID set to user provided ID -->
+                <form action="https://formspree.io/f/xojjvwoo" method="POST" class="space-y-6 text-left">
                     <div>
                         <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Company Name</label>
-                        <input type="text" class="w-full bg-slate-50 border border-slate-200 p-3 focus:outline-none focus:border-emerald-900 transition-colors" placeholder="貴社名">
+                        <input type="text" name="company" class="w-full bg-slate-50 border border-slate-200 p-3 focus:outline-none focus:border-emerald-900 transition-colors" placeholder="貴社名" required>
                     </div>
                     <div>
                         <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Email</label>
-                        <input type="email" class="w-full bg-slate-50 border border-slate-200 p-3 focus:outline-none focus:border-emerald-900 transition-colors" placeholder="email@example.com">
+                        <input type="email" name="email" class="w-full bg-slate-50 border border-slate-200 p-3 focus:outline-none focus:border-emerald-900 transition-colors" placeholder="email@example.com" required>
                     </div>
                     <div>
                         <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Message</label>
-                        <textarea rows="4" class="w-full bg-slate-50 border border-slate-200 p-3 focus:outline-none focus:border-emerald-900 transition-colors" placeholder="お問い合わせ内容"></textarea>
+                        <textarea name="message" rows="4" class="w-full bg-slate-50 border border-slate-200 p-3 focus:outline-none focus:border-emerald-900 transition-colors" placeholder="お問い合わせ内容" required></textarea>
                     </div>
-                    <button class="w-full bg-emerald-900 text-white font-bold py-4 hover:bg-emerald-800 transition-colors flex items-center justify-center gap-2 group">
+                    <button type="submit" class="w-full bg-emerald-900 text-white font-bold py-4 hover:bg-emerald-800 transition-colors flex items-center justify-center gap-2 group">
                         Send Message 
                         <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
                     </button>
@@ -375,16 +431,17 @@
     <footer class="bg-slate-900 text-white py-12 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center gap-6">
             <div class="flex items-center gap-2">
-                 <!-- Logo in Footer (White version via filter) -->
+                 <!-- Logo in Footer -->
+                 <!-- brightness-0 invert to make the logo white on dark footer -->
                  <img 
-                    src="./ロゴ黒.png" 
+                    src="./logo.png" 
                     alt="RIG consulting Logo" 
-                    class="h-8 w-auto brightness-0 invert opacity-80"
-                    onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+                    class="h-10 md:h-12 w-auto brightness-0 invert"
+                    onerror="if(!this.src.includes('ロゴ黒.png')) this.src='./ロゴ黒.png'; else { this.style.display='none'; this.nextElementSibling.style.display='block'; }"
                 >
                 <span class="text-xl font-bold tracking-tighter hidden">RIG</span>
             </div>
-            <p class="text-slate-500 text-xs tracking-wider">
+            <p class="text-white text-xs tracking-wider">
                 © RIG consulting LLC. All Rights Reserved.
             </p>
         </div>
@@ -401,16 +458,82 @@
         const mobileMenu = document.getElementById('mobile-menu');
         const menuIcon = menuToggle.querySelector('i');
         const mobileLinks = document.querySelectorAll('.mobile-link');
+        const navLogo = document.getElementById('nav-logo');
+        const navText = document.getElementById('nav-text');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const navCta = document.querySelector('.nav-cta');
+        
         let isMenuOpen = false;
 
         // Scroll Logic
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
+            const isScrolled = window.scrollY > 50;
+            
+            if (isScrolled) {
+                // Scrolled State (White background)
                 navbar.classList.remove('bg-transparent', 'py-6');
                 navbar.classList.add('bg-white/90', 'backdrop-blur-md', 'shadow-sm', 'py-4');
+                
+                // Toggle Logo & Text Colors
+                // Logo: Original (Black text), blend white bg (multiply)
+                navLogo.classList.remove('invert', 'mix-blend-screen');
+                navLogo.classList.add('mix-blend-multiply');
+                navLogo.style.mixBlendMode = 'multiply';
+                
+                navText.classList.remove('text-white');
+                navText.classList.add('text-slate-900');
+                
+                menuToggle.classList.remove('text-white');
+                menuToggle.classList.add('text-slate-900');
+
+                // Links
+                navLinks.forEach(link => {
+                    link.classList.remove('text-white', 'hover:text-emerald-200');
+                    link.classList.add('text-slate-900', 'hover:text-emerald-800');
+                    const span = link.querySelector('span');
+                    if(span) {
+                        span.classList.remove('bg-white');
+                        span.classList.add('bg-emerald-900');
+                    }
+                });
+
+                // CTA Button
+                navCta.classList.remove('bg-white', 'text-emerald-900', 'hover:bg-slate-100');
+                navCta.classList.add('bg-emerald-900', 'text-white', 'hover:bg-emerald-800');
+
             } else {
+                // Top State (Transparent background)
                 navbar.classList.remove('bg-white/90', 'backdrop-blur-md', 'shadow-sm', 'py-4');
                 navbar.classList.add('bg-transparent', 'py-6');
+
+                // Toggle Logo & Text Colors
+                // Logo: Inverted (White text), blend black bg (screen)
+                navLogo.classList.remove('mix-blend-multiply');
+                navLogo.classList.add('invert', 'mix-blend-screen');
+                navLogo.style.mixBlendMode = 'screen';
+                
+                navText.classList.remove('text-slate-900');
+                navText.classList.add('text-white');
+                
+                if (!isMenuOpen) {
+                     menuToggle.classList.remove('text-slate-900');
+                     menuToggle.classList.add('text-white');
+                }
+
+                // Links
+                navLinks.forEach(link => {
+                    link.classList.remove('text-slate-900', 'hover:text-emerald-800');
+                    link.classList.add('text-white', 'hover:text-emerald-200');
+                    const span = link.querySelector('span');
+                    if(span) {
+                        span.classList.remove('bg-emerald-900');
+                        span.classList.add('bg-white');
+                    }
+                });
+
+                // CTA Button
+                navCta.classList.remove('bg-emerald-900', 'text-white', 'hover:bg-emerald-800');
+                navCta.classList.add('bg-white', 'text-emerald-900', 'hover:bg-slate-100');
             }
         });
 
@@ -419,24 +542,29 @@
             isMenuOpen = !isMenuOpen;
             if (isMenuOpen) {
                 mobileMenu.classList.remove('hidden');
-                // Use setTimeout to allow display:block to apply before opacity transition
                 setTimeout(() => mobileMenu.classList.remove('opacity-0'), 10);
-                
-                // Change icon to X
                 menuIcon.setAttribute('data-lucide', 'x');
+                
+                // Ensure menu toggle is visible on white background
+                menuToggle.classList.remove('text-white');
+                menuToggle.classList.add('text-slate-900');
+
             } else {
                 mobileMenu.classList.add('opacity-0');
                 setTimeout(() => mobileMenu.classList.add('hidden'), 300);
-                
-                // Change icon back to Menu
                 menuIcon.setAttribute('data-lucide', 'menu');
+                
+                // Revert toggle color if at top
+                if (window.scrollY <= 50) {
+                    menuToggle.classList.remove('text-slate-900');
+                    menuToggle.classList.add('text-white');
+                }
             }
             lucide.createIcons();
         };
 
         menuToggle.addEventListener('click', toggleMenu);
 
-        // Close mobile menu when clicking a link
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
                 if (isMenuOpen) toggleMenu();
